@@ -172,7 +172,7 @@ router.get('/getAccessToken', async (req, res) => {
        */
       let accessTokenStored = req.session.accessToken;
       let refreshToken = req.session.refreshToken;
-      console.log('refresh token : ',refreshToken)
+      console.log('refresh token : ', refreshToken)
       if (accessTokenStored === tempAccessToken) {
         console.log('User is verified');
         let getAccessTokenByRefreshTokenResult = await getAccessTokenByRefreshToken(refreshToken);
